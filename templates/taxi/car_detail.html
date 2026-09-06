@@ -7,7 +7,10 @@
       <a class="btn btn-secondary" href="{% url 'taxi:car-update' pk=car.id %}">
         Update
       </a>
-      <a class="btn btn-danger" href="{% url 'taxi:car-delete' pk=car.id %}">
+      <a
+          class="btn btn-danger"
+          href="{% url 'taxi:car-delete' pk=car.id %}?next={{ request.path }}"
+      >
         Delete
       </a>
     </div>

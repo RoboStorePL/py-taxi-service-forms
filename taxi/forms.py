@@ -8,5 +8,5 @@ class CarForm(forms.ModelForm):
         model = Car
         fields = "__all__"
         widgets = {
-            "drivers": forms.CheckboxSelectMultiple,
+            "drivers": forms.CheckboxSelectMultiple(),
         }

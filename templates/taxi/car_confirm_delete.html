@@ -6,7 +6,11 @@
   <form method="post">
     {% csrf_token %}
     <button class="btn btn-danger" type="submit">Delete</button>
-    <a class="btn btn-secondary" href="{% url 'taxi:car-detail' pk=car.id %}">
+    {% url 'taxi:car-detail' pk=car.id as car_detail_url %}
+    <a
+        class="btn btn-secondary"
+        href="{{ request.GET.next|default:car_detail_url }}"
+    >
       Cancel
     </a>
   </form>

@@ -117,7 +117,7 @@ AUTH_USER_MODEL = "taxi.Driver"
 
 LOGIN_REDIRECT_URL = "/"
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap4"]
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Internationalization
